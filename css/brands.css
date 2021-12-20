@@ -94,6 +94,7 @@ button:hover,
 
 /* CV */
 .button.button-cv {
+  line-height: 44px;
   color: #7C878E;
   border-style: solid;
   border-color: #7C878E;
