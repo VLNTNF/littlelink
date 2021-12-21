@@ -90,9 +90,11 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  * Inner border.
+ * Remove underline.
  */
 
 a {
+  text-decoration: none;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
