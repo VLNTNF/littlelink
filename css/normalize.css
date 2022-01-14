@@ -194,6 +194,7 @@ sub {
 
 img {
   border: 0;
+  vertical-align: center;
 }
 
 /**
