@@ -24,8 +24,10 @@
       <div class="column" style="margin-top: 10%">
         <img src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="Profile Picture">
         <h1>Valentin FOSSE</h1>
-        <img id="lang" src='/images/icons/french.svg' style="width: 24px; margin-bottom: 12px;"
-          onclick="langToggle(true)">
+        <img id="langFR" src='/images/icons/french.svg' style="width: 24px; margin-bottom: 12px;" alt="FR"
+          onclick="langSet('fr')">
+        <img id="langEN" src='/images/icons/english.svg' style="width: 24px; margin-bottom: 12px;" alt="EN"
+          onclick="langSet('en')">
         <p id="bio"></p>
         <a class="button button-default" href="mailto:Valentin%20FOSSE%20<pro@fossev.com>" target="_blank"
           rel="noopener"><img class="icon" src="images/icons/email.svg" alt="Email Icon">pro@fossev.com</a>
@@ -48,18 +50,12 @@
     </div>
   </div>
   <script>
-    const langToggle = (toggle) => {
-      let lang = document.documentElement.getAttribute('lang');
-      if (!toggle) {
-        lang = (lang == 'fr') ? 'en' : 'fr';
-      }
-      if (lang == 'fr') {
-        if (toggle) {
-          document.documentElement.setAttribute('lang', 'en');
-          localStorage.setItem('lang', 'en');
-        }
-        document.getElementById('lang').src = '/images/icons/french.svg';
-        document.getElementById('lang').alt = 'FR';
+    const langSet = (lang) => {
+      if (lang == 'en') {
+        document.documentElement.setAttribute('lang', 'en');
+        localStorage.setItem('lang', 'en');
+        document.getElementById('langFR').classList.add('gray-img');
+        document.getElementById('langEN').classList.remove('gray-img');
         document.getElementById('bio').innerHTML = `Student-Engineer in final year of <a href="https://www.esilv.fr/en/" target="_blank"
             rel="noopener">ESILV</a>'s data & AI major,<br>looking for a <b>5-6 month internship</b> starting in
           February 2022.`;
@@ -67,12 +63,10 @@
         document.getElementById('link').href = 'https://link.fossev.com/?locale=en_US';
         document.getElementById('insta').innerHTML = 'Filters (hobby)';
       } else {
-        if (toggle) {
-          document.documentElement.setAttribute('lang', 'fr');
-          localStorage.setItem('lang', 'fr');
-        }
-        document.getElementById('lang').src = '/images/icons/english.svg';
-        document.getElementById('lang').alt = 'EN';
+        document.documentElement.setAttribute('lang', 'fr');
+        localStorage.setItem('lang', 'fr');
+        document.getElementById('langFR').classList.remove('gray-img');
+        document.getElementById('langEN').classList.add('gray-img');
         document.getElementById('bio').innerHTML = `Etudiant-Ingénieur en dernière année de majeure Data & IA de l'<a href="https://www.esilv.fr/" target="_blank"
             rel="noopener">ESILV</a>,<br>en recherche d'un <b>stage de 5-6 mois</b> à partir de
           février 2022.`;
@@ -81,7 +75,7 @@
         document.getElementById('insta').innerHTML = 'Filtres (loisir)';
       }
     };
-    langToggle(false);
+    langSet(document.documentElement.getAttribute('lang'));
   </script>
 </body>
 
