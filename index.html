@@ -3,10 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Valentin FOSSE</title>
-  <meta name="description" content="Find us online!">
-  <meta name="author" content="Seth Cottle">
+  <meta property="og:title" content='Valentin FOSSE' />
+  <meta property="og:image" content='images/thumbnail.png' />
+  <meta property="og:description" content='Mes liens professionnels.' />
+  <meta property="og:url" content='fossev.com' />
+  <meta property="og:image:width" content='1200' />
+  <meta property="og:image:height" content='627' />
+  <meta property="og:type" content='website' />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valentin FOSSE</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton-light.css">
@@ -51,6 +56,7 @@
   </div>
   <script>
     const langSet = (lang) => {
+      let insta = '<img class="icon" src="images/icons/instagram.svg" alt="Instagram Logo">'
       if (lang == 'en') {
         document.documentElement.setAttribute('lang', 'en');
         localStorage.setItem('lang', 'en');
@@ -61,7 +67,7 @@
           February 2022.`;
         document.getElementById('CV').href = 'pdf/CV_en_Valentin_FOSSE.pdf';
         document.getElementById('link').href = 'https://link.fossev.com/?locale=en_US';
-        document.getElementById('insta').innerHTML = 'Filters (hobby)';
+        document.getElementById('insta').innerHTML = insta + 'Filters (hobby)';
       } else {
         document.documentElement.setAttribute('lang', 'fr');
         localStorage.setItem('lang', 'fr');
@@ -72,7 +78,7 @@
           février 2022.`;
         document.getElementById('CV').href = 'pdf/CV_fr_Valentin_FOSSE.pdf';
         document.getElementById('link').href = 'https://link.fossev.com/';
-        document.getElementById('insta').innerHTML = 'Filtres (loisir)';
+        document.getElementById('insta').innerHTML = insta + 'Filtres (loisir)';
       }
     };
     langSet(document.documentElement.getAttribute('lang'));
