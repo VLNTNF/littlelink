@@ -42,21 +42,22 @@
         <img id="langEN" src='/images/icons/english.svg' style="width: 24px; margin-bottom: 12px;" alt="EN"
           onclick="langSet('en')">
           -->
-        <p id="bio"></p>
+        <p id="bio">Software Engineer chez <b><a href="https://contentsquare.com/" target="_blank"
+              rel="noopener">Contentsquare</a></b></p>
         <a class="button button-default" href="mailto:Valentin%20FOSSE%20<pro@fossev.com>" target="_blank"
           rel="noopener"><img class="icon" src="images/icons/email.svg" alt="Email Icon">pro@fossev.com</a>
         <br>
-        <a id="CV" class="button button-cv" target="_blank" rel="noopener"><img class="icon"
-            src="images/icons/cv-file.svg" alt="CV Icon">Curriculum Vitae</a>
+        <a id="CV" class="button button-cv" href="pdf/CV_fr_Valentin_FOSSE.pdf" target="_blank" rel="noopener"><img
+            class="icon" src="images/icons/cv-file.svg" alt="CV Icon">Curriculum Vitae</a>
         <br>
         <a class="button button-github" href="https://git.fossev.com/" target="_blank" rel="noopener"><img class="icon"
             src="images/icons/github.svg" alt="GitHub Logo">GitHub</a>
         <br>
-        <a id="link" class="button button-linked" target="_blank" rel="noopener"><img class="icon"
-            src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
+        <a id="link" class="button button-linked" href="https://link.fossev.com/" target="_blank" rel="noopener"><img
+            class="icon" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
         <br>
         <a id="insta" class="button button-instagram" href="https://filters.fossev.com/" target="_blank"
-          rel="noopener"><img class="icon" src="images/icons/instagram.svg" alt="Instagram Logo"></a>
+          rel="noopener"><img class="icon" src="images/icons/instagram.svg" alt="Instagram Logo">Filtres (loisir)</a>
         <br>
         <br>
         <br>
@@ -93,12 +94,6 @@
     };
     langSet(document.documentElement.getAttribute('lang'));
     */
-    document.getElementById('bio').innerHTML = `Etudiant-Ingénieur en dernière année de majeure Data & IA de l'<a href="https://www.esilv.fr/" target="_blank"
-            rel="noopener">ESILV</a>,<br>en recherche d'un <b>premier emploi</b> à partir de
-          septembre 2022.`;
-    document.getElementById('CV').href = 'pdf/CV_fr_Valentin_FOSSE.pdf';
-    document.getElementById('link').href = 'https://link.fossev.com/';
-    document.getElementById('insta').innerHTML = '<img class="icon" src="images/icons/instagram.svg" alt="Instagram Logo">Filtres (loisir)';
   </script>
 </body>
 
